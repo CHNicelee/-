@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <ProgressBar
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar" />
+
+    <android.support.v7.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="#FFF"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/ll_wrap"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:background="@drawable/line_et_bg"
+                android:id="@+id/et_title"
+                android:hint="事件"
+                android:textSize="22sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:background="@drawable/line_et_bg"
+
+                android:hint="备注（可选）"
+                android:id="@+id/et_detail"
+                android:layout_width="match_parent"
+                android:layout_height="140dp" />
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="@string/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:text="其他"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/line_et_bg"
+                    android:id="@+id/et_type"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:background="#efefef"
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_margin="10dp"
+            app:layout_anchor="@id/ll_wrap"
+            app:layout_anchorGravity="bottom|end"
+            android:id="@+id/fab"
+            app:elevation="10dp"
+            android:src="@drawable/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

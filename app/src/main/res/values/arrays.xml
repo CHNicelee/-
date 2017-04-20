@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="album">
+        <item>七里香</item>
+        <item>Jay</item>
+        <item>叶惠美</item>
+        <item>我很忙</item>
+        <item>摩羯座</item>
+    </string-array>
+
+</resources>

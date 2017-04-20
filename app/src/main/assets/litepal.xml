@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="dailyEvent" />
+
+    <version value="4" />
+
+    <list>
+        <mapping class="com.ice.dailyevent.bean.LocalEvent"></mapping>
+    </list>
+
+
+</litepal>
